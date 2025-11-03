@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>Upload PDF</h2>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input style="height:20px" type="file" name="pdffile" accept="application/pdf"/><br>
+      <button type="submit" style="">Upload</button>
+    </form>
+    <p><a href="{% url 'query' %}">Hỏi đáp</a></p>
+  </body>
+</html>

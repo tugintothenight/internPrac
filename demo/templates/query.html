@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <body>
+    <h1 style="text-align: center">Demo</h1><br>
+    <form method="post">
+      {% csrf_token %}
+      <input style="height: 30px" type="text" name="query" size="200" placeholder="Nhập câu hỏi..."/><br>
+      <button style="height: 50px; width: 80px; " type="submit">Hỏi</button>
+    </form>
+
+    {% if answer %}
+      <h3>Đáp án</h3>
+      <div style="border:1px solid #ddd;padding:10px">{{ answer|linebreaks }}</div>
+<!--      <h4>Đoạn trích tham chiếu</h4>-->
+<!--      <ul>-->
+<!--        {% for c in contexts %}-->
+<!--          <li><b>{{ c.meta.source }} (page {{ c.meta.page }})</b>: {{ c.text|truncatechars:300 }}</li>-->
+<!--        {% endfor %}-->
+<!--      </ul>-->
+    {% endif %}
+  </body>
+
+</html>
