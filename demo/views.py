@@ -12,8 +12,8 @@ import google.generativeai as genai
 from langchain.llms.base import LLM
 from typing import Optional, List
 
-# ---- Cấu hình Gemini ----
-GEMINI_API_KEY = "AIzaSyBgiAD2qtmBPMdu8qLnvuGYj6WxmkepJ70"
+
+GEMINI_API_KEY = ""
 genai.configure(api_key=GEMINI_API_KEY)
 
 
@@ -31,7 +31,7 @@ class GeminiLLM(LLM):
         except Exception as e:
             return f"Lỗi khi gọi Gemini API: {e}"
 
-# ---- Prompt Template ----
+
 template = """You are a virtual assistant specialized in reading and summarizing documents.
 Below is the context extracted from the document:
 {context}
